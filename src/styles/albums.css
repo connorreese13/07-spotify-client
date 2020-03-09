@@ -32,8 +32,8 @@
   #albums {
     height: calc(100vh - 50px);
     overflow-y: scroll;
-    grid-column-gap: 5px;
-    grid-row-gap: 5px;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
     padding: 10px;
     box-sizing: border-box;
     grid-template-columns: repeat(auto-fit, 160px);

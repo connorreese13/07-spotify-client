@@ -13,10 +13,11 @@
 
 #songs > table > thead {
   font-weight: 700;
+  background: #7a7a7a;
 }
 
 #songs > table > thead > tr {
-  border-bottom: 1px solid #dedede;
+  border-bottom: 1px solid grey;
 }
 
 #songs > table > thead > tr > th {
@@ -37,6 +38,16 @@
 #songs > table > tbody > tr > td {
   border: none;
   padding: 10px 5px;
+}
+
+#songs > table > tbody > tr {
+  transition: transform 0.2s;
+}
+
+#songs > table > tbody > tr:hover {
+  border: none;
+  padding: 10px 5px;
+  transform: scale(1.015);
 }
 
 #songs > table > tbody > tr > td:first-child {
