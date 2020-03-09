@@ -1,5 +1,6 @@
 import React from "react";
 import { Howl } from "howler";
+import "../styles/songs.css";
 
 class Song extends React.Component {
   state = {

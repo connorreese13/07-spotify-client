@@ -15,6 +15,7 @@ class Songs extends React.Component {
       .get(`${process.env.REACT_APP_API}/songs`)
       .then(res => {
         this.setState({ songs: res.data });
+        console.log(res.data);
       })
       .catch(err => {
         console.log({ err });
@@ -26,9 +27,20 @@ class Songs extends React.Component {
         <Sidebar page="songs" />
         <div id="songs">
           <table>
-            {this.state.songs.map(item => {
-              return <Song song={item} />;
-            })}
+            <thead>
+              <tr>
+                <th></th>
+                <th>Name</th>
+                <th>Artist</th>
+                <th>Album</th>
+                <th>Genre</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.songs.map((item, index) => {
+                return <Song song={item} key={index} />;
+              })}
+            </tbody>
           </table>
         </div>
       </div>
